@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>PURCHASE RENEWAL</title>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../css/purchase.css">
+        <script src="https://js.stripe.com/v3/"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	</head>
+	<body>
+		<div id="form">
+			<h1 id="logo"><a class="hidden_link" href="/">VERTIGO</a></h1>
+            <form id="form-form" action="javascript:void(0);">
+                <div id="purchase-info">
+                    <p>6 month renewal</p>
+                    <p>£30</p>
+                </div>
+				<!-- placeholder for Elements -->
+                <label>Card</label>
+				<div id="card-element" class="field"></div>
+				<div class="g-recaptcha" data-sitekey="6LdLTc0UAAAAAJKCJxPRCg-OAnNIwBP208tFB2k3" data-theme="dark"></div>
+				<p id="message"></p>
+				<button id="card-button">PURCHASE</button>
+			</form>
+            <a id="go-back" href="/">Go back</a>
+			<div id="loader"></div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/stripe.js"></script>
+</html>

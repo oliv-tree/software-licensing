@@ -1,0 +1,68 @@
+#help-wrapper {
+
+}
+
+#help-wrapper .help-section {
+    margin: 100px 26%;
+}
+
+#help-wrapper .help-section h3 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+#help-wrapper .help-section .help-sub-section-wrapper {
+}
+
+#help-wrapper .help-section .help-sub-section {
+    margin-bottom: 20px;
+    background-color: #121212;
+    padding: 30px;
+}
+
+#help-wrapper .help-section .help-sub-section.bottom-sub-section {
+    margin-bottom: 0px;
+}
+
+
+#help-wrapper .help-section .help-sub-section h4 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+#help-wrapper .help-section .help-sub-section p {
+    color: #bbb;
+    letter-spacing: 0.5px;
+    font-weight: normal;
+    font-size: 13px;
+    background-color: #121212;
+    line-height: 20px;
+}
+
+#help-wrapper .help-section .help-sub-section ul {
+    color: #fff;
+    list-style-position: inside;
+}
+
+#help-wrapper .help-section .help-sub-section li {
+    color: #bbb;
+    letter-spacing: 0.5px;
+    font-weight: normal;
+    font-size: 13px;
+    background-color: #121212;
+    line-height: 20px;
+    list-style-type: square;
+    margin-bottom: 10px;
+}
+
+#help-wrapper .help-section .help-sub-section span {
+    font-weight: 600;
+    color: #fff;
+}

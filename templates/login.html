@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>LOGIN</title>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<link href="{{ url_for("static", filename="stylesheets/account.css") }}" type="text/css" rel="stylesheet">
+		<link rel="icon" type="image/png" href="{{ url_for("static", filename="images/logo.png") }}">
+	</head>
+	<body>
+		<h1 id="logo"><a class="hidden_link" href="/">VERTIGO</a></h1>
+		<h2 id="page">[ LOGIN ]</h2>
+		<form action="/login" method="post" id="form">
+			<label>EMAIL</label>
+			<input type="text" name="email" required pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" title="Enter a valid email." style="margin-bottom: 40px">
+			<label>PASSWORD</label>
+			<input type="password" name="password" required pattern=".{8,30}" title="Enter a password between 8-30 characters.">
+			<!-- make disappear after 3s? -->
+			<a id="forgotten" href="initiate_reset_password">Forgotten your password?</a>
+			<div class="g-recaptcha" data-sitekey="6LdLTc0UAAAAAJKCJxPRCg-OAnNIwBP208tFB2k3" data-theme="dark"></div>
+			<p id="message">{{ message }}</p>
+			<input type="submit" value="SUBMIT">
+		</form>
+	</body>
+	<script type="text/javascript" src="{{ url_for("static", filename="scripts/recaptcha.js") }}"></script>
+</html>

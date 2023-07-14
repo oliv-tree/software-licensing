@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>VERTIGO</title>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+		<link href="{{ url_for("static", filename="stylesheets/pages.css") }}" type="text/css" rel="stylesheet">
+		<script type="text/javascript">var in_stock = {{ in_stock|tojson }};</script>
+		<link rel="icon" type="image/png" href="{{ url_for("static", filename="images/logo.png") }}">
+	</head>
+	<body>
+		<header>
+			<h1 id="logo"><a href="/" class="hidden_link">VERTIGO</a></h1>
+			{% if "email" in session %}
+			<ul id="menu" style="margin-right: 25px;">
+				<li><a href="/" class="active">Home</a></li>
+				<li><a href="faq">FAQ</a></li>
+				<div class="dropdown">
+					<li>{{ session["email"] }} ▼</li>
+					<div class="dropdown-content">
+						<a href="dashboard">Dashboard</a>
+						<a href="logout">Log out</a>
+					</div>
+				</div>
+			</ul>
+			{% else %}
+			<div id="buy-button-wrapper">
+				<a href="javascript: void(0)" id="buy-link"><button type="button" name="button" id="buy">SOLD OUT</button></a>
+			</div>
+			<ul id="menu">
+				<li><a href="/" class="active">Home</a></li>
+				<li><a href="faq">FAQ</a></li>
+				<li><a href="login">Login</a></li>
+			</ul>
+			{% endif %}
+		</header>
+	</body>
+	<script type="text/javascript" src="{{ url_for("static", filename="scripts/stock.js") }}"></script>
+	<script type="text/javascript" src="{{ url_for("static", filename="scripts/dropdown.js") }}"></script>
+</html>

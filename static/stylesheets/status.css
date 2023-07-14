@@ -1,0 +1,60 @@
+/* General */
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  background-color: #171717;
+}
+
+::selection {
+  color: #fff;
+  background: #333;
+}
+
+
+/* Title */
+
+h1#logo {
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin-top: 130px;
+}
+
+h2#page {
+  font-size: 13.5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #bbb;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+a.hidden_link {
+  text-decoration: none;
+  color: #fff;
+}
+
+p#status {
+  text-align: center;
+  color: #bbb;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+img#tick {
+  margin: 20px auto 0 auto;
+  display: block;
+  height: 35px;
+  width: auto;
+}

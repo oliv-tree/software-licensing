@@ -1,0 +1,187 @@
+/* General */
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  background-color: #171717;
+}
+
+::selection {
+  color: #fff;
+  background: #333;
+}
+
+::placeholder {
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+
+/* Title */
+
+h1#logo {
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin-top: 130px;
+  margin-bottom: 20px;
+}
+
+a.hidden_link {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Form */
+
+
+#form {
+  margin: 0 30%;
+  text-align: center;
+}
+
+#form #purchase-info {
+  width: auto;
+  display: inline-block;
+  color: #bbb;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+#form #purchase-info p {
+  width: auto;
+  display: block;
+  text-align: center;
+  line-height: 25px;
+}
+
+#form #card-element {
+  background-color: #121212;
+}
+
+#form #card-element {
+  color: #fff;
+  padding: 0px 12px;
+  width: 400px;
+  margin: 0 auto;
+  padding: 0 12px;
+  transition: all .15s linear;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#form #card-element.StripeElement--focus {
+  box-shadow: inset 0 -2px 0px 0px #109173;
+}
+
+#form p#message {
+  color: #bbb;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+  display: block;
+}
+
+#form p#message:empty {
+  display: none;
+}
+
+#form input[type="text"], #form input[type="password"] {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 200px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  height: 25px;
+  padding: 6px 12px 4px 12px;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  transition: all .15s linear;
+  color: #fff;
+  background-color: #121212;
+  box-shadow:none;
+  margin-bottom: 40px;
+}
+
+#form input[type="text"]:focus, #form input[type="password"]:focus {
+  border-bottom: 2px solid #109173 !important;
+}
+
+
+#form button#card-button {
+  background-color: #109173;
+  border: 1px solid #109173;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: all .15s linear;
+  display: block;
+  margin: 40px auto 0 auto;
+  outline: none;
+}
+
+#form button#card-button:disabled {
+  background-color: #0b6550;
+  border: 1px solid #0b6550;
+}
+
+#form button#card-button:hover {
+  background-color: #0b6550;
+  border: 1px solid #0b6550;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+#form label {
+  color: #bbb;
+  text-align: center;
+  display: block;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+#loader {
+  display: none;
+  margin-top: 20px;
+  border: 6px solid #bbb; /* Light grey */
+  border-top: 6px solid #109173; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+form#form {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.g-recaptcha {
+  display: inline-block;
+  margin-top: 40px;
+}

@@ -1,0 +1,175 @@
+#dashboard-wrapper {
+  margin: 50px 28vw 0px calc(28vw - 176px);
+  height: 700px;
+  font-size: 0;
+  border: 1px solid #222;
+}
+
+#dashboard-wrapper #dashboard-menu {
+  width: 175px;
+  display: inline-block;
+  float: left;
+  border-right: 1px solid #1c1c1c;
+  height: 100%;
+}
+
+#dashboard-wrapper #dashboard-menu ul {
+
+}
+
+#dashboard-wrapper #dashboard-menu ul li {
+  list-style-type: none;
+  /* display: inline-block; */
+  width: 152px;
+  cursor: pointer;
+  padding: 40px 0 40px 20px;
+  /* border-bottom: 1px solid #1a1a1a; */
+  color: #bbb;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-left: 3px inset transparent;
+}
+
+#dashboard-wrapper #dashboard-menu ul li:hover {
+  color: #fff;
+}
+
+
+#dashboard-wrapper #dashboard-menu ul li.active-link {
+  border-left: 3px inset #109173;
+  color: #fff;
+}
+
+#dashboard-wrapper #dashboard-content {
+  overflow: hidden;
+  height: 100%;
+}
+
+#dashboard-content #account-sub-content, #dashboard-content #discord-sub-content, #dashboard-content #password-sub-content {
+  display: none;
+}
+
+#dashboard-content #password-sub-content {
+  text-align: center;
+}
+
+#dashboard-wrapper #dashboard-content .shown {
+  display: block;
+}
+
+
+#dashboard-wrapper #dashboard-content h3.dashboard-title {
+  color: #fff;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 50px 0 75px 0;
+  text-align: center;
+  display: block;
+}
+
+#dashboard-wrapper #dashboard-content ul {
+
+}
+
+#dashboard-wrapper #dashboard-content ul li {
+  text-transform: uppercase;
+  list-style-type: none;
+  color: #bbb;
+  letter-spacing: 1.5px;
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#dashboard-wrapper #dashboard-content label {
+  color: #bbb;
+  text-align: center;
+  display: block;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+#dashboard-wrapper #dashboard-content input[type="password"], input[type="text"] {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 200px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  height: 25px;
+  padding: 6px 12px 4px 12px;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  transition: all .15s linear;
+  border-bottom: 2px solid transparent;
+  color: #fff;
+  background-color: #121212;
+  box-shadow:none;
+}
+
+#dashboard-wrapper #dashboard-content input[type="password"]:focus, input[type="text"]:focus {
+  border-bottom: 2px solid #109173 !important;
+}
+
+input[type="submit"] {
+  background-color: #109173;
+  border: 1px solid #109173;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: all .15s linear;
+  display: block;
+  margin: 40px auto 0 auto;
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  background-color: #0b6550;
+  border: 1px solid #0b6550;
+}
+
+#dashboard-wrapper #dashboard-content button#reset-device {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: all .15s linear;
+  color: #fff;
+  background-color: #109173;
+  border: 1px solid #109173;
+  margin: 50px auto 0 auto;
+  display: block;
+  font-size: 11px;
+  outline: none;
+}
+
+#dashboard-wrapper #dashboard-content button#reset-device:hover {
+  background-color: #0b6550;
+  border: 1px solid #0b6550;
+}
+
+.g-recaptcha {
+  display: inline-block;
+  margin-top: 40px;
+}
+
+p#message {
+  display: block;
+  color: #bbb;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+}
+
+p#message:empty {
+  display: none;
+}

@@ -1,0 +1,79 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>FAQ</title>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+		<link href="{{ url_for("static", filename="stylesheets/pages.css") }}" type="text/css" rel="stylesheet">
+		<script type="text/javascript">var in_stock = {{ in_stock|tojson }};</script>
+		<link href="{{ url_for("static", filename="stylesheets/faq.css") }}" type="text/css" rel="stylesheet">
+		<link rel="icon" type="image/png" href="{{ url_for("static", filename="images/logo.png") }}">
+	</head>
+	<body>
+		<header>
+			<h1 id="logo"><a href="/" class="hidden_link">VERTIGO</a></h1>
+			{% if "email" in session %}
+			<ul id="menu" style="margin-right: 25px;">
+				<li><a href="/">Home</a></li>
+				<li><a href="faq" class="active">FAQ</a></li>
+				<div class="dropdown">
+					<li>{{ session["email"] }} ▼</li>
+					<div class="dropdown-content">
+						<a href="dashboard">Dashboard</a>
+						<a href="logout">Log out</a>
+					</div>
+				</div>
+			</ul>
+			{% else %}
+			<div id="buy-button-wrapper">
+				<a href="javascript: void(0)" id="buy-link"><button type="button" name="button" id="buy">SOLD OUT</button></a>
+			</div>
+			<ul id="menu">
+				<li><a href="/" class="active">Home</a></li>
+				<li><a href="faq">FAQ</a></li>
+				<li><a href="login">Login</a></li>
+			</ul>
+			{% endif %}
+		</header>
+		<h2 class="title">FAQ</h2>
+		<div id="faq-wrapper">
+			<div class="faq-item">
+				<h3 class="faq-question">How long does my license last?</h3>
+				<p class="faq-answer">When you initially purchase your license, you will be able to use the bot for 1 year. You can purchase a 6 month renewal by clicking "Renew" in your dashboard.</p>
+			</div>
+			<div class="faq-item">
+				<h3 class="faq-question">How do I change my account password?</h3>
+				<p class="faq-answer">If you know your current password, simply click "Dashboard" and then "Change password".</p>
+			</div>
+			<div class="faq-item">
+				<h3 class="faq-question">How do I reset my account password?</h3>
+				<p class="faq-answer">If you forgot your password, click "Login" then "Forgotten your password?".</p>
+				</p>
+			</div>
+			<div class="faq-item">
+				<h3 class="faq-question">How do I change the device my license is activated on?</h3>
+				<p class="faq-answer">If you want to move your license to another device, you can do so by either clicking "Log out" in the "Account" section of the bot, or by clicking "Dashboard" and then "Reset device".</p>
+			</div>
+			<div class="faq-item">
+				<h3 class="faq-question">What do I do if the bot randomly starts saying I am trying to use multiple devices?</h3>
+				<p class="faq-answer">This can happen after certain hardware or software changes and can be fixed by resetting the device your license is activated on. To do this, read the previous answer.</p>
+			</div>
+			<div class="faq-item">
+				<h3 class="faq-question">How do I move my settings to a new device?</h3>
+				<p class="faq-answer">On the device you want to move from, go to "Account" and then click "Export Settings". Move this file to the new device, then click "Import settings" on that device and select the fii</p>
+			</div>
+			<div class="faq-item">
+				<h3 class="faq-question">When will you restock?</h3>
+				<p class="faq-answer">We do not have a restock schedule, but restock announcements will be made via our twitter @vertigobot.</p>
+			</div>
+			<div class="faq-item">
+				<h3 class="faq-question">Which operating systems are supported?</h3>
+				<p class="faq-answer">VERTIGO SUPPORTS Windows 10, MAC OS and Linux.</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="{{ url_for("static", filename="scripts/stock.js") }}"></script>
+	<script type="text/javascript" src="{{ url_for("static", filename="scripts/dropdown.js") }}"></script>
+</html>

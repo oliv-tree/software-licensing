@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Help</title>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+		<link href="{{ url_for("static", filename="stylesheets/pages.css") }}" type="text/css" rel="stylesheet">
+		<script type="text/javascript">var in_stock = {{ in_stock|tojson }};</script>
+		<link href="{{ url_for("static", filename="stylesheets/help.css") }}" type="text/css" rel="stylesheet">
+		<link rel="icon" type="image/png" href="{{ url_for("static", filename="images/logo.png") }}">
+	</head>
+	<body>
+		<header>
+			<h1 id="logo"><a href="/" class="hidden_link">VERTIGO</a></h1>
+			{% if "email" in session %}
+			<ul id="menu" style="margin-right: 25px;">
+				<li><a href="/">Home</a></li>
+				<li><a href="faq">FAQ</a></li>
+                <li><a href="help" class="active">Help</a></li>
+				<div class="dropdown">
+					<li>{{ session["email"] }} ▼</li>
+					<div class="dropdown-content">
+						<a href="dashboard">Dashboard</a>
+						<a href="logout">Log out</a>
+					</div>
+				</div>
+			</ul>
+			{% else %}
+			<div id="buy-button-wrapper">
+				<a href="javascript: void(0)" id="buy-link"><button type="button" name="button" id="buy">SOLD OUT</button></a>
+			</div>
+			<ul id="menu">
+				<li><a href="/" class="active">Home</a></li>
+				<li><a href="faq">FAQ</a></li>
+                <li><a href="help" class="active">Help</a></li>
+				<li><a href="login">Login</a></li>
+			</ul>
+			{% endif %}
+		</header>
+		<h2 class="title">HELP</h2>
+		<div id="help-wrapper">
+			<div class="help-section">
+				<h3>Tasks</h3>
+				<div class="help-sub-section-wrapper">
+					<div class="help-sub-section">
+						<h4>Summary</h4>
+						<p>The tasks page displays a table with all of your current tasks. Each task shows you the name of the store, the keywords used, the size selected, the profile, the proxies list and the task status. You can also start/stop each task, edit them, duplicate them or delete them.</p>
+					</div>
+					<div class="help-sub-section">
+						<h4>Creating tasks</h4>
+						<ul>
+							<li><span>Store URL ‒</span> this is the URL of the store you are trying to bot, e.g. https://kith.com</li>
+							<li><span>Size ‒</span> this is the size you want for the product. If you don’t care what size, or it’s a one size item then select “Any”</li>
+							<li><span>Maximum price ‒</span> if you enter this, then the bot will not purchase the product if its price exceeds this price. Please note that this does not include tax</li>
+							<li><span>Product selector ‒</span> this determines how the bot chooses which product to buy. The “Match all keywords” option will only select a product if all of your keywords are found in its name/description. “Highest keyword count” will select the product with the greatest number of keyword matches</li>
+							<li><span>Keywords ‒</span> these are the words that will be used to search for the product. Enter them separated by a comma without a space</li>
+							<li><span>Negative keywords ‒</span> these words will prevent the bot from buying a product if any of them show up in its name/description. Enter them in the same way as regular keywords</li>
+							<li><span>Refresh delay ‒</span> Refresh delay – this is how often the bot will check for updated stock in milliseconds</li>
+							<li><span>Profile ‒</span> this is the checkout profile you with to use</li>
+							<li><span>Proxies ‒</span> this is the proxy list you want to use</li>
+							<li><span>Scheduled task ‒</span> if you would like the bot to start itself at a given time, then input this time here</li>
+							<li><span>Quantity ‒</span> this is the number of tasks to create with the selected settings</li>
+						</ul>
+					</div>
+					<div class="help-sub-section bottom-sub-section">
+						<h4>Captcha</h4>
+						<p>Clicking the "Captcha harvester" button will open the harvester windows. When a task requires a captcha, it will show up here and you will need to solve it for it to proceed.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="help-section">
+				<h3>Profiles</h3>
+				<div class="help-sub-section-wrapper">
+					<div class="help-sub-section">
+						<h4>Summary</h4>
+						<p>The profiles page contains a table with all of your created profiles. Each profile shows the name you gave it, the email used, some billing info, last 4 digits of your card and whether or not you selected it to be single checkout. You can also edit each profile, duplicate them or delete them.</p>
+					</div>
+					<div class="help-sub-section bottom-sub-section">
+						<h4>Creating a profile</h4>
+						<ul>
+							<li><span>Email ‒</span> this is the email address that will be submitted with your order</li>
+							<li><span>Phone number ‒</span> this is the phone number that will be submitted with your order</li>
+							<li><span>Single checkout ‒</span> if you only want this profile to checkout once then select this option. Please note that it may not always be possible to cancel other tasks once one has been successful as they may have already started to process the payment</li>
+							<li><span>Profile name ‒</span> this is the name of the profile that will show up in the bot</li>
+							<li><span>Shipping ‒</span> enter your shipping information</li>
+							<li><span>Billing ‒</span> enter your billing information if required</li>
+							<li><span>Payment ‒</span> enter your payment information</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="help-section">
+				<h3>Proxies</h3>
+				<div class="help-sub-section-wrapper">
+					<div class="help-sub-section">
+						<h4>Summary</h4>
+						<p>The proxies page has a table with all of your created proxy lists. Each list shows the name you assigned to it and the amount of proxies in that list. You can also edit each list, duplicate them or delete them.</p>
+					</div>
+					<div class="help-sub-section bottom-sub-section">
+						<h4>Creating a proxy list</h4>
+						<ul>
+							<li><span>Proxies/span> ‒ enter your proxies into the input in the format IP:port:username:password or IP:port</li>
+							<li><span>List name ‒</span> this is the name of the list that will show up in the bot</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="help-section">
+				<h3>Account</h3>
+				<div class="help-sub-section-wrapper">
+					<div class="help-sub-section">
+						<h4>Summary</h4>
+						<p>The account page displays the email address of your account as well as when your license expires. Additionally, it provides further functions outlined below.</p>
+					</div>
+					<div class="help-sub-section">
+						<h4>Dashboard</h4>
+						<p>You can visit your dashboard from within the bot, this will link you to our website where you can change things such as your password.</p>
+					</div>
+					<div class="help-sub-section">
+						<h4>Settings</h4>
+						<p>The “Export Settings” button will save your settings in a JSON file. You can then import this into the bot using the “Import Settings” button and selecting the file.</p>
+					</div>
+					<div class="help-sub-section">
+						<h4>Log out</h4>
+						<p>When you log out of the bot, it will reset the device activation and so you can use the bot on another device. </p>
+					</div>
+					<div class="help-sub-section">
+						<h4>Discord webhook</h4>
+						<p>Enter the webhook URL for your server to send checkout details to your Discord. You can enable/disable this with the button, and save your changes with the “Save” button.</p>
+					</div>
+					<div class="help-sub-section bottom-sub-section">
+						<h4>Version</h4>
+						<p>This displays the version number of your bot. You can click the “Check for updates” button to ensure that you are up to date.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+	<script type="text/javascript" src="{{ url_for("static", filename="scripts/stock.js") }}"></script>
+	<script type="text/javascript" src="{{ url_for("static", filename="scripts/dropdown.js") }}"></script>
+</html>

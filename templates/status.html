@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>STATUS</title>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<link href="{{ url_for("static", filename="stylesheets/status.css") }}" type="text/css" rel="stylesheet">
+		<link rel="icon" type="image/png" href="{{ url_for("static", filename="images/logo.png") }}">
+	</head>
+	<body>
+		<h1 id="logo"><a class="hidden_link" href="/">VERTIGO</a></h1>
+		<h2 id="page">[ ORDER STATUS ]</h2>
+		<p id="status">{{ message|safe }}</p>
+		<img id="tick" src="{{ url_for("static", filename="images/checked.png") }}" type="text/css" rel="stylesheet">
+	</body>
+</html>

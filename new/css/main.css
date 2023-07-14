@@ -1,0 +1,179 @@
+/* General */
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  background-color: #171717;
+}
+
+::selection {
+  color: #fff;
+  background: #333;
+}
+
+button::-moz-focus-inner, input[type="submit"]::-moz-focus-inner {
+  border: 0;
+}
+
+
+/* Hero */
+
+#hero {
+    background-color: #0b6550;
+    height: 700px;
+	background: linear-gradient(-45deg, #109153, #109173, #108f91);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#hero #hero-content {
+    margin-top: 80px;
+    text-align: center;
+}
+
+#hero #hero-content h2 {
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1.5px;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+#hero #hero-content h2 span {
+    font-weight: 300;
+}
+
+#hero #hero-content p {
+    margin: 0 auto;
+    color: #fff;
+    filter: opacity(0.75);
+    width: 626.417px;
+    text-align: left;
+}
+
+#hero #hero-content button[name="features"] {
+    display: inline-block;
+    text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 13px 30px;
+	cursor: pointer;
+	transition: all .15s linear;
+	font-size: 13px;
+	outline: none;
+	border-radius: 40px;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    margin: 50px auto 50px auto;
+}
+
+#hero #hero-content button[name="features"]:hover {
+    border: 1px solid #bbb;
+    color: #eee;
+}
+
+#hero #hero-content img {
+    height: 60px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 80px;
+    font-size: 0;
+}
+
+header #header-right {
+    position: absolute;
+    right: 50px;
+    height: 80px;
+    display: inline-block;
+    line-height: 80px;
+    max-height: 80px;
+    vertical-align: middle;
+}
+
+header h1 {
+    font-size: 35px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: left;
+    line-height: 80px;
+    max-height: 80px;
+    vertical-align: middle;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+header ul {
+    display: inline-block;
+    margin-top: 0;
+}
+
+header ul li {
+    list-style-type: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 31.5px 32px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    border-bottom: 2px solid #fff;
+}
+
+header button[name="purchase"] {
+    display: inline-block;
+    text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 13px 30px;
+	cursor: pointer;
+	transition: all .15s linear;
+	font-size: 13px;
+	outline: none;
+	border-radius: 40px;
+    margin-left: 20px;
+    background-color: #fff;
+    color: #109173;
+    border: 1px solid #fff;
+    font-weight: 700;
+}
+
+header button[name="purchase"]:hover {
+    color: #fff;
+	border: 1px solid #fff;
+    background-color: transparent;
+}
